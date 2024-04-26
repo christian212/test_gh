@@ -20,6 +20,12 @@ extensions = [
     "sphinx_multiversion",
 ]
 
+# -- Sphinx Multiversion --------------------------------------------------
+# https://holzhaus.github.io/sphinx-multiversion/master/configuration.html#
+smv_tag_whitelist = r'^v\d+\.\d+\.\d+$'
+smv_branch_whitelist = r'^(main|release/.*)$'
+smv_remote_whitelist = r'^(origin|upstream)$'
+
 templates_path = ['_templates']
 
 html_sidebars = {
@@ -34,8 +40,6 @@ html_sidebars = {
 }
 
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
-
-
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
